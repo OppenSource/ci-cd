@@ -1,9 +1,5 @@
-function changeMessage() {
-  document.getElementById('message').textContent = "Message changé!";
-}
+const changeMessage = () => {
+  document.getElementById("message").textContent = "Message changé!";
+};
 
- 
- module.exports = {
-  changeMessage
- };
- 
+module.exports = { changeMessage };
