@@ -34,3 +34,6 @@ jobs:
 
       - name: Deploy to Vercel
         run: vercel --token ${{ secrets.VERCEL_TOKEN }} --prod
+
+      - name: Tests
+        run: npm test
