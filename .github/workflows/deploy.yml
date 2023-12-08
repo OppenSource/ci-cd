@@ -13,11 +13,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Install and Build
-        run: |
-          npm install
-          npm run build
-
       - name: Run Tests
         run: npm test
 
