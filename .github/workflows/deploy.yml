@@ -27,16 +27,10 @@ jobs:
           node_version: 18.x
 
       - name: Installer les dépendances
-        run: npm install --force
+        run: npm install
 
       - name: Installer Versel CLI
         run: npm install --global vercel@latest
 
-      - name: Pull Versel Configurations
-        run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
-
-      - name: Build Project Artifacts
-        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
-
-      - name: Deploy Project Artifacts to Vercel
-        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Deploy to Vercel
+        run: vercel --token ${{ secrets.VERCEL_TOKEN }} --prod
